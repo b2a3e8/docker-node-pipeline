@@ -1,4 +1,4 @@
-FROM node:10.15-stretch
+FROM node:8.10-stretch
 
 # install cypress.io dependencies
 RUN apt-get update && apt-get install -y \
@@ -21,6 +21,6 @@ RUN pip3 install awscli                   # install awscli
 # print versions of tools
 RUN echo "node version:        $(node -v) \n" \
          "npm version:         $(npm -v) \n" \
-         "awscli verison:      $(aws -v) \n" \
+         "awscli verison:      $(aws --version) \n" \
          "serverless verison:  $(serverless -v) \n" \
          "debian version:      $(cat /etc/debian_version) \n"
