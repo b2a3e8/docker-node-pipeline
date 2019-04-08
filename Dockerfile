@@ -19,8 +19,8 @@ RUN pip3 install --upgrade pip            # update python package manager
 RUN pip3 install awscli                   # install awscli
 
 # print versions of tools
-RUN echo  "node version:        $(node -v) \n" \
-          "npm version:         $(npm -v) \n" \
-          "awscli verison:      $(awscli -v) \n" \
-          "serverless verison:  $(serverless -v) \n" \
-          "debian version:      $(cat /etc/debian_version) \n"
+RUN echo "node version:        $(node -v) \n" \
+         "npm version:         $(npm -v) \n" \
+         "awscli verison:      $(awscli -v) \n" \
+         "serverless verison:  $(serverless -v) \n" \
+         "debian version:      $(cat /etc/debian_version) \n"
