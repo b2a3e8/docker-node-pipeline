@@ -1,4 +1,4 @@
-FROM node:10.15-stretch
+FROM node:8.10-stretch
 
 # install cypress.io dependencies
 RUN apt-get update && apt-get install -y \
@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get update && apt-get install -y \
     python3 python3-pip
 
+RUN npm install npm -g                    # update npm
 RUN npm install -g serverless             # install serverless framework
 RUN pip3 install --upgrade pip            # update python package manager
 RUN pip3 install awscli                   # install awscli
