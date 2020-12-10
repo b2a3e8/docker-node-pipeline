@@ -1,4 +1,4 @@
-FROM node:14.15-stretch
+FROM node:current-stretch
 
 # install cypress.io dependencies
 RUN apt-get update && apt-get install -y \
