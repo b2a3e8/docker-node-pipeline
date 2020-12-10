@@ -1,18 +1,23 @@
-FROM node:10.15-stretch
+FROM node:14.15-stretch
 
 # install cypress.io dependencies
 RUN apt-get update && apt-get install -y \
     libgtk2.0-0 \
+    libgtk-3-0 \
+    libgbm-dev \
     libnotify-dev \
     libgconf-2-4 \
     libnss3 \
     libxss1 \
     libasound2 \
+    libxtst6 \
+    xauth \
     xvfb
 
 # install awscli dependencies
 RUN apt-get update && apt-get install -y \
-    python3 python3-pip
+    python3 \
+    python3-pip
 
 RUN npm install -g serverless             # install serverless framework
 RUN pip3 install --upgrade pip            # update python package manager
